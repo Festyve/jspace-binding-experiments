@@ -41,7 +41,9 @@ Run it before spending GPU money.
 ## 1. Run order
 
 RQ1, RQ2, and E4 need only the model and the lens. The primary experiment needs
-two artifact-producing stages first, and a manual config edit between them.
+two artifact-producing stages first: direction fitting, then calibration.
+`run_primary.py` loads the calibrated strengths automatically for the matching
+site; explicit config values override that record.
 
 ```bash
 # --- no prerequisites beyond model + lens -------------------------------
@@ -65,9 +67,17 @@ python scripts/calibrate.py      --config configs/default.yaml   # -> data/calib
 python scripts/run_primary.py --config configs/default.yaml
 ```
 
-Archive each run as you go — `python scripts/save_run.py <label>` copies the
-config's output paths into `runs/` and pushes them, which matters on an
-ephemeral box where `.gitignore` excludes every output location.
+Archive each run as you go:
+
+```bash
+python scripts/save_run.py my-run --config configs/default.yaml --no-push
+```
+
+Replace `my-run` with a descriptive run label. Use the same config that produced
+the run so the script copies the correct
+output paths into `runs/`. The command above creates a local commit; omit
+`--no-push` to also push it. This matters on an ephemeral box where `.gitignore`
+excludes generated output locations.
 
 **Run the replication gate first.** When an experiment reports "role is not in
 J-space", that is indistinguishable from "the lens is not reading" from its own
@@ -153,3 +163,8 @@ python scripts/reanalyze_primary.py --run runs/gemma3-12b-lre --site entity_toke
 
 Both exit 1 if an archived verdict disagrees with the current rule. Neither
 recomputes a measurement.
+
+The Gemma-3-12B command above currently exits 1 because the archived
+`significant_but_tiny` label is superseded by
+`indistinguishable_from_controls`; [RESULTS.md](RESULTS.md) records the current
+interpretation. This comparison does not rewrite the archived trials.
