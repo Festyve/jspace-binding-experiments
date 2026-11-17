@@ -36,8 +36,8 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/Festyve/ane-mrbe"
-Results = "https://github.com/Festyve/ane-mrbe/blob/main/RESULTS.md"
+Repository = "https://github.com/Festyve/jspace-binding-experiments"
+Results = "https://github.com/Festyve/jspace-binding-experiments/blob/main/RESULTS.md"
 
 [build-system]
 requires = ["hatchling"]

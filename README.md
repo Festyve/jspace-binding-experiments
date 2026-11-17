@@ -1,6 +1,6 @@
-# J-space role–filler binding
+# J-space Binding Experiments
 
-[![CI](https://github.com/Festyve/ane-mrbe/actions/workflows/ci.yml/badge.svg)](https://github.com/Festyve/ane-mrbe/actions/workflows/ci.yml)
+[![CI](https://github.com/Festyve/jspace-binding-experiments/actions/workflows/ci.yml/badge.svg)](https://github.com/Festyve/jspace-binding-experiments/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](pyproject.toml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
@@ -58,7 +58,7 @@ flowchart LR
 
 See [ARCHITECTURE.md](docs/ARCHITECTURE.md) for the scoring equations, module
 contracts, and design decisions. Contributor attribution is recorded in the
-[commit history](https://github.com/Festyve/ane-mrbe/commits/main/) and source credits.
+[commit history](https://github.com/Festyve/jspace-binding-experiments/commits/main/) and source credits.
 
 ## Run locally — no GPU required
 
@@ -66,8 +66,8 @@ Use **Python 3.10 or newer**. The base installation needs no model weights or
 PyTorch; CI uses Python 3.12.
 
 ```bash
-git clone https://github.com/Festyve/ane-mrbe.git
-cd ane-mrbe
+git clone https://github.com/Festyve/jspace-binding-experiments.git
+cd jspace-binding-experiments
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[dev]'
