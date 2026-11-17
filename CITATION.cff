@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this research implementation, please cite the paper below and record the repository commit and experiment artifact."
+title: "J-space Binding Experiments"
+type: software
+authors:
+  - name: "J-space Binding Experiments contributors"
+repository-code: "https://github.com/Festyve/jspace-binding-experiments"
+url: "https://arxiv.org/abs/2611.19176"
+license: MIT
+preferred-citation:
+  type: article
+  title: "A Bag of Concepts? Testing Role-Filler Binding in the Verbalizable Workspace"
+  authors:
+    - family-names: "Dawlah"
+      given-names: "Reya"
+    - family-names: "McMillin"
+      given-names: "Elizabeth"
+    - family-names: "Zhang"
+      given-names: "Michael Shihong"
+    - family-names: "Ananth"
+      given-names: "Badrish"
+    - family-names: "Ruia"
+      given-names: "Rishi Adi"
+    - family-names: "Zuñiga"
+      given-names: "Ane"
+    - family-names: "Jiralerspong"
+      given-names: "Thomas"
+  year: 2026
+  journal: "arXiv"
+  doi: "10.48550/arXiv.2611.19176"
+  url: "https://arxiv.org/abs/2611.19176"
+  notes: "Accepted at Interpretability as a Science Workshop, NeurIPS 2026."

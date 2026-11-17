@@ -8,11 +8,13 @@ An experimental framework for studying how language models represent **who did
 what to whom**: controlled stimuli, activation probes, causal interventions,
 and reproducible statistical analysis across Qwen and Gemma models.
 
-> **Paper repository:** [A Bag of Concepts? Testing Role-Filler Binding in the
-> Verbalizable Workspace](https://github.com/Reyadawlah/role-filler-binding-jspace).
+> **Paper:** [A Bag of Concepts? Testing Role-Filler Binding in the
+> Verbalizable Workspace](https://arxiv.org/abs/2611.19176) (arXiv:2611.19176).
+> Accepted at the Interpretability as a Science Workshop, NeurIPS 2026.
+>
 > This repository preserves the research implementation and experiment history
-> developed for that work. It remains public as a record of the technical work;
-> use the paper repository for paper-specific reproduction instructions.
+> developed for that work. For paper-specific reproduction instructions, use the
+> [paper repository](https://github.com/Reyadawlah/role-filler-binding-jspace).
 
 **Explore:** [Architecture](docs/ARCHITECTURE.md) · [Results](RESULTS.md) ·
 [GPU runbook](RUNBOOK.md) · [Tests](tests/)
@@ -162,6 +164,26 @@ The re-scoring command leaves the archived trial records unchanged.
 | [`data/`](data/) | Curated corpora and reviewable stimulus CSVs; generated outputs are ignored |
 | [`runs/`](runs/) | Archived experiment artifacts, indexed by [RESULTS.md](RESULTS.md) |
 | [`docs/`](docs/) | Architecture, concept-probe design, and NLA scoping notes |
+
+## Citation
+
+If you use this work, please cite the paper:
+
+```bibtex
+@misc{dawlah2026bagconcepts,
+  title = {A Bag of Concepts? Testing Role-Filler Binding in the Verbalizable Workspace},
+  author = {Reya Dawlah and Elizabeth McMillin and Michael Shihong Zhang and Badrish Ananth and Rishi Adi Ruia and Ane Zuñiga and Thomas Jiralerspong},
+  year = {2026},
+  eprint = {2611.19176},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url = {https://arxiv.org/abs/2611.19176}
+}
+```
+
+For a specific experiment, also include the repository commit and the artifact
+identified in [RESULTS.md](RESULTS.md). Machine-readable citation metadata is
+available in [CITATION.cff](CITATION.cff).
 
 ## License
 
